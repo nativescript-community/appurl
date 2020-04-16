@@ -8,7 +8,7 @@ let URL_HANDLER_CB: UrlHandlerCallback;
  */
 export function extractAppURL(urlParam: any): AppURL {
     if (!!urlParam) {
-        let url = urlParam.toString(),
+        const url = urlParam.toString(),
             params = new Map<string, string>(),
             urlWithPath = url.indexOf('//') < url.length - 2,
             urlWithParams = url.indexOf('?') !== -1,
@@ -17,13 +17,13 @@ export function extractAppURL(urlParam: any): AppURL {
         // create JSON object
         if (urlWithParams) {
             for (let i = 0, len = parameters.length; i < len; i++) {
-                let paramData = parameters[i].split('=');
+                const paramData = parameters[i].split('=');
                 params.set(paramData[0], paramData[1] ? paramData[1] : null);
             }
         }
         return {
-            params: params,
-            path: path,
+            params,
+            path,
             toString: () => url
         };
     } else {
@@ -42,4 +42,12 @@ export function getCallback(): UrlHandlerCallback {
         };
     }
     return URL_HANDLER_CB;
+}
+export function _handleURL(appURL, args?) {
+    if (!URL_HANDLER_CB) {
+        console.error('No callback provided. Please ensure that you called "handleOpenURL" during application init!');
+    } else {
+        URL_HANDLER_CB(appURL, args);
+    }
+
 }

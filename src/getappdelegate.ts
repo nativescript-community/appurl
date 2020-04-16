@@ -1,4 +1,4 @@
-import * as application from 'application';
+import * as application from '@nativescript/core/application';
 
 /**
  * The following function is part of the NativeScript plugin: nativescript-plugin-firebase
@@ -16,7 +16,7 @@ export function getAppDelegate() {
             public static ObjCProtocols = [UIApplicationDelegate];
 
             static new(): UIApplicationDelegateImpl {
-                return <UIApplicationDelegateImpl>super.new();
+                return super.new();
             }
         }
 

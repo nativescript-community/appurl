@@ -1,0 +1,34 @@
+{
+    "name": "nativescript-appurl",
+    "version": "1.3.0",
+    "description": "Register custom URLs for your NativeScript app",
+    "main": "urlhandler",
+    "typings": "urlhandler.d.ts",
+    "dependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/farfromrefug/nativescript-appurl.git"
+    },
+    "nativescript": {
+        "platforms": {
+            "android": "3.4.0",
+            "ios": "3.4.0"
+        },
+        "plugin": {
+            "nan": "true",
+            "pan": "true",
+            "core3": "true",
+            "category": "Processing"
+        }
+    },
+    "keywords": [
+        "NativeScript",
+        "URL-Handler"
+    ],
+    "author": "Martin Guillong",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/farfromrefug/nativescript-appurl/issues"
+    },
+    "homepage": "https://github.com/farfromrefug/nativescript-appurl"
+}

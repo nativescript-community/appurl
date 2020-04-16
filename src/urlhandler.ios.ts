@@ -1,5 +1,5 @@
-import { getCallback, extractAppURL } from './urlhandler.common';
-import { getAppDelegate } from "./getappdelegate";
+import { _handleURL, extractAppURL } from './urlhandler.common';
+import { getAppDelegate } from './getappdelegate';
 export { handleOpenURL } from './urlhandler.common';
 
 export const appDelegate = getAppDelegate();
@@ -24,9 +24,12 @@ enableMultipleOverridesFor(
         const previousResult = lastArgument !== options ? lastArgument : undefined;
 
         if (!previousResult) {
-            let appURL = extractAppURL(url.absoluteString);
+            const appURL = extractAppURL(url.absoluteString);
             if (appURL != null) {
-                setTimeout(() => getCallback()(appURL));
+                _handleURL(appURL, {
+                    url,
+                    options
+                });
             }
             return true;
         }
@@ -39,14 +42,18 @@ enableMultipleOverridesFor(
     'applicationContinueUserActivityRestorationHandler',
     function (
         application: UIApplication,
-        userActivity: NSUserActivity
+        userActivity: NSUserActivity,
+        restorationHandler
     ): boolean {
         if (userActivity.activityType === NSUserActivityTypeBrowsingWeb) {
 
-            let appURL = extractAppURL(userActivity.webpageURL);
+            const appURL = extractAppURL(userActivity.webpageURL);
 
             if (appURL !== null) {
-                setTimeout(() => getCallback()(appURL));
+                _handleURL(appURL, {
+                    userActivity,
+                    restorationHandler
+                });
             }
         }
 

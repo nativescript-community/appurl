@@ -1,4 +1,4 @@
-export interface UrlHandlerCallback { (data: any): void; }
+export type UrlHandlerCallback = (data: any, args?) => void;
 export interface AppURL extends Object {
     path: string;
     params: Map<string, string>;

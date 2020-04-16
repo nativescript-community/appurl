@@ -166,7 +166,7 @@ If your Webpack Build is failing, try adapting your tsconfig to this:
         "baseUrl": ".",
         "paths": {
             "*": [
-                "./node_modules/tns-core-modules/*",
+                "./node_modules/@nativescript/core/*",
                 "./node_modules/*"
             ]
         }
