@@ -45,14 +45,15 @@
     },
     "keywords": [
         "NativeScript",
-        "URL-Handler"
+        "URL-Handler",
+        "Deep links"
     ],
-    "author": "Martin Guillong",
+    "author": "Michael Konstantynovskyi",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/farfromrefug/nativescript-appurl/issues"
+        "url": "https://github.com/mikykonst/nativescript-appurl-handler/issues"
     },
-    "homepage": "https://github.com/farfromrefug/nativescript-appurl",
+    "homepage": "https://github.com/mikykonst/nativescript-appurl-handler",
     "commitlint": {
         "extends": [
             "@commitlint/config-conventional"
