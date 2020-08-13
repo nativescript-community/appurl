@@ -23,6 +23,9 @@ export function getAppDelegate() {
         application.ios.delegate = UIApplicationDelegateImpl;
     }
 
+    // This is critical since Delegate can be garbage-collected!
+    (global as any).storingDelegateToAvoidGC = application.ios.delegate;
+
     return application.ios.delegate;
 }
 
