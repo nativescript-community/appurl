@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/nativescript-community/appurl/compare/v1.3.5...v1.4.0) (2020-09-06)
+
+
+### Features
+
+* N7 and new plugin name ([8942519](https://github.com/nativescript-community/appurl/commit/8942519a0ab39c91fb2ac8fac992d8caba661efb))
+
+
+
+
+
 ## [1.3.5](https://github.com/nativescript-community/appurl/compare/v1.3.4...v1.3.5) (2020-07-28)
 
 **Note:** Version bump only for package @nativescript-community/appurl
