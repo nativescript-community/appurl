@@ -4,9 +4,9 @@ this is a direct fork/rewrite of [nativescript-urlhandler](https://github.com/hy
 It did not seem to be maintained anymore and was not working as expected
 
 
-[npm-image]:http://img.shields.io/npm/v/nativescript-appurl.svg
-[npm-url]:https://npmjs.org/package/nativescript-appurl
-[downloads-image]:http://img.shields.io/npm/dm/nativescript-appurl.svg
+[npm-image]:http://img.shields.io/npm/v/@nativescript-community/appurl.svg
+[npm-url]:https://npmjs.org/package/@nativescript-community/appurl
+[downloads-image]:http://img.shields.io/npm/dm/@nativescript-community/appurl.svg
 # Usage
 
 Just add App links to your app, see iOS and Android instructions below, and register a handler for the URL data.
@@ -14,7 +14,7 @@ Just add App links to your app, see iOS and Android instructions below, and regi
 See this example for Angular:
 ```typescript
 import { Component, OnInit } from "@angular/core";
-import { handleOpenURL, AppURL } from 'nativescript-appurl';
+import { handleOpenURL, AppURL } from '@nativescript-community/appurl';
 
 @Component({
   selector: "gr-main",
@@ -34,7 +34,7 @@ export class AppComponent {
 ```
 And for pure NativeScript:
 ```javascript
-var handleOpenURL = require("nativescript-appurl").handleOpenURL;
+var handleOpenURL = require("@nativescript-community/appurl").handleOpenURL;
 
 handleOpenURL(function(appURL) {
   console.log('Got the following appURL', appURL);
@@ -43,7 +43,7 @@ handleOpenURL(function(appURL) {
 ```
 Or as TypeScript:
 ```typescript
-import { handleOpenURL, AppURL } from 'nativescript-appurl';
+import { handleOpenURL, AppURL } from '@nativescript-community/appurl';
 
 handleOpenURL((appURL: AppURL) => {
   console.log('Got the following appURL', appURL);
@@ -57,13 +57,13 @@ handleOpenURL((appURL: AppURL) => {
 ## Installation
 
 ```bash
-$ tns plugin add nativescript-appurl
+$ tns plugin add @nativescript-community/appurl
 ```
 
 Or if you want to use the development version (nightly build), which maybe not stable!:
 
 ```bash
-$ tns plugin add nativescript-appurl@next
+$ tns plugin add @nativescript-community/appurl@next
 ```
 
 

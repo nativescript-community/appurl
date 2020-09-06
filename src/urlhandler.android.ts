@@ -1,4 +1,4 @@
-import { android as andApp, AndroidApplication, AndroidActivityEventData, AndroidActivityNewIntentEventData } from '@nativescript/core/application';
+import { AndroidActivityEventData, AndroidActivityNewIntentEventData, AndroidApplication, android as andApp } from '@nativescript/core/application';
 import { _handleURL, extractAppURL } from './urlhandler.common';
 export { handleOpenURL } from './urlhandler.common';
 

@@ -29,7 +29,7 @@
   "dependencies": {
     "nativescript-theme-core": "^1.0.2",
     "nativescript-unit-test-runner": "^0.3.4",
-    "nativescript-appurl": "*",
+    "@nativescript-community/appurl": "*",
     "@nativescript/core": "^5.1.2"
   },
   "devDependencies": {

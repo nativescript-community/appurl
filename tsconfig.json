@@ -1,7 +1,8 @@
 {
     "compilerOptions": {
-        "target": "es5",
-        "module": "commonjs",
+        "target": "es2017",
+        "module": "esnext",
+        "moduleResolution": "node",
         "declaration": true,
         "removeComments": true,
         "noLib": false,
@@ -30,7 +31,10 @@
             ],
             "tns-core-modules": ["./node_modules/@nativescript/core"],
             "tns-core-modules/*": ["./node_modules/@nativescript/core/*"]
-        }
+        },
+        "plugins": [
+          { "transform": "./node_modules/@nativescript/webpack/transformers/ns-transform-native-classes", "type": "raw" }
+        ]
     },
     "include": [
         "src/**/*.ts",

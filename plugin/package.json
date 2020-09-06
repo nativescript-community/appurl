@@ -1,12 +1,12 @@
 {
-    "name": "nativescript-appurl",
+    "name": "@nativescript-community/appurl",
     "version": "1.3.5",
     "description": "Register custom URLs for your NativeScript app",
     "main": "urlhandler",
     "typings": "urlhandler.d.ts",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/farfromrefug/nativescript-appurl.git"
+        "url": "git+https://github.com/nativescript-community/appurl.git"
     },
     "nativescript": {
         "platforms": {
@@ -27,8 +27,8 @@
     "author": "Martin Guillong",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/farfromrefug/nativescript-appurl/issues"
+        "url": "https://github.com/nativescript-community/appurl/issues"
     },
-    "homepage": "https://github.com/farfromrefug/nativescript-appurl",
+    "homepage": "https://github.com/nativescript-community/appurl",
     "gitHead": "5bcd1e5802e8860d7930546843176f83aa2f13d7"
 }
