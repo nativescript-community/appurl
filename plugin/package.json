@@ -8,6 +8,7 @@
         "type": "git",
         "url": "git+https://github.com/nativescript-community/appurl.git"
     },
+    "sideEffects": false,
     "nativescript": {
         "platforms": {
             "android": "3.4.0",
