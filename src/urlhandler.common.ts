@@ -8,7 +8,7 @@ let URL_HANDLER_CB: UrlHandlerCallback;
  */
 export function extractAppURL(urlParam: any): AppURL {
     if (!!urlParam) {
-        const url = urlParam.toString(),
+        const url = decodeURIComponent(urlParam.toString()).replace('com.android.providers.downloads.documents/document/raw:', ''),
             params = new Map<string, string>(),
             urlWithPath = url.indexOf('//') < url.length - 2,
             urlWithParams = url.indexOf('?') !== -1,
