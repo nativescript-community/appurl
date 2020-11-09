@@ -1,6 +1,6 @@
 {
     "name": "@nativescript-community/appurl",
-    "version": "1.4.1",
+    "version": "1.4.2",
     "description": "Register custom URLs for your NativeScript app",
     "main": "urlhandler",
     "typings": "urlhandler.d.ts",

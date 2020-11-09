@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.2](https://github.com/nativescript-community/appurl/compare/v1.4.1...v1.4.2) (2020-11-09)
+
+
+### Bug Fixes
+
+* android handle documents ([87460f7](https://github.com/nativescript-community/appurl/commit/87460f7ff61a8be5d83dfcd5b39f2b54474806cf))
+
+
+
+
+
 ## [1.4.1](https://github.com/nativescript-community/appurl/compare/v1.4.0...v1.4.1) (2020-11-02)
 
 **Note:** Version bump only for package @nativescript-community/appurl
