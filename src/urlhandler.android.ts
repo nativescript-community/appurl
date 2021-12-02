@@ -1,6 +1,11 @@
 import { AndroidActivityEventData, AndroidActivityNewIntentEventData, AndroidApplication, android as andApp } from '@nativescript/core/application';
-import { _handleURL, extractAppURL } from './urlhandler.common';
-export { handleOpenURL } from './urlhandler.common';
+import { _handleOpenURL, _handleURL, extractAppURL } from './urlhandler.common';
+import { UrlHandlerCallback } from './urlhandler';
+export { _handleOpenURL } from './urlhandler.common';
+
+export function handleOpenURL(handler: UrlHandlerCallback): void {
+    _handleOpenURL(handler);
+}
 
 export function handleIntent(intent: android.content.Intent, args?) {
     const data = intent.getData();

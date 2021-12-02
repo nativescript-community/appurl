@@ -31,7 +31,7 @@ export function extractAppURL(urlParam: any): AppURL {
     }
 }
 
-export function handleOpenURL(handler: UrlHandlerCallback): void {
+export function _handleOpenURL(handler: UrlHandlerCallback): void {
     URL_HANDLER_CB = handler;
 }
 
@@ -43,11 +43,11 @@ export function getCallback(): UrlHandlerCallback {
     }
     return URL_HANDLER_CB;
 }
+
 export function _handleURL(appURL, args?) {
     if (!URL_HANDLER_CB) {
         console.error('No callback provided. Please ensure that you called "handleOpenURL" during application init!');
     } else {
         URL_HANDLER_CB(appURL, args);
     }
-
 }

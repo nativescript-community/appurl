@@ -1,12 +1,16 @@
-import { _handleURL, extractAppURL } from './urlhandler.common';
+import { _handleOpenURL, _handleURL, extractAppURL } from './urlhandler.common';
 import { getAppDelegate } from './getappdelegate';
-export { handleOpenURL } from './urlhandler.common';
+import { UrlHandlerCallback } from './urlhandler';
+
+export function handleOpenURL(handler: UrlHandlerCallback): void {
+    _handleOpenURL(handler);
+}
 
 export const appDelegate = getAppDelegate();
 
 function enableMultipleOverridesFor(classRef, methodName, nextImplementation) {
     const currentImplementation = classRef.prototype[methodName];
-    classRef.prototype[methodName] = function () {
+    classRef.prototype[methodName] = function() {
         const result = currentImplementation && currentImplementation.apply(currentImplementation, Array.from(arguments));
         return nextImplementation.apply(nextImplementation, Array.from(arguments).concat([result]));
     };
@@ -15,7 +19,7 @@ function enableMultipleOverridesFor(classRef, methodName, nextImplementation) {
 enableMultipleOverridesFor(
     appDelegate,
     'applicationOpenURLOptions',
-    function (
+    function(
         application: UIApplication,
         url: NSURL,
         options: any
@@ -40,7 +44,7 @@ enableMultipleOverridesFor(
 enableMultipleOverridesFor(
     appDelegate,
     'applicationContinueUserActivityRestorationHandler',
-    function (
+    function(
         application: UIApplication,
         userActivity: NSUserActivity,
         restorationHandler
